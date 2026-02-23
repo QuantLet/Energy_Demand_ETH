@@ -1,0 +1,6 @@
+Name of Quantlet: Energy Demand ETH
+Published in: 'Non'
+Description: ' Our study introduces a hybrid methodology that quantifies the energy consumption of miners in ETH based on traditional top-down and bottom-up estimates.'
+Keywords: 'ETH, Energy, Consumption, Threshold, Calibration, Plot'
+Author: 'Patrick Woitschig, Ruting Rainy WANG' 
+Submitted:  '23.02.2026'
