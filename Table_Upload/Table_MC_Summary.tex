@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Parameter-only Monte Carlo summaries based on 20,000 draws per specification.}
+\label{tab:mc_summary}
+\begin{tabular}{lrrrr}
+\toprule
+Specification & Power median (GW) & 2.5--97.5 pct. & Reduction median (\%) & 2.5--97.5 pct. \\
+\midrule
+U1: Economics only & 3.024 & 2.598--3.699 & 91.78 & 86.57--93.74 \\
+U2: Composition only & 2.851 & 2.151--3.260 & 92.64 & 90.24--93.56 \\
+U3: Joint; ASIC share 10\% & 3.016 & 2.497--3.806 & 91.70 & 86.55--93.90 \\
+U4: Joint; ASIC share 25\% & 2.891 & 2.249--3.995 & 91.22 & 86.50--93.67 \\
+U5: Joint; ASIC share 50\% & 2.657 & 1.916--4.397 & 90.24 & 85.78--93.37 \\
+U6: U4 + dispersed shares & 2.886 & 2.110--4.068 & 91.13 & 85.80--93.94 \\
+U7: U4 + correlated economics & 2.905 & 2.307--3.972 & 91.29 & 86.21--93.96 \\
+U8: U4 + 5-GB devices & 2.899 & 2.206--3.877 & 91.18 & 86.28--93.77 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note:} All default draws are valid. Percentile ranges describe specified parameter distributions, not statistical confidence intervals. U1 varies tariff/overhead; U2 varies composition; U3--U5 vary both; U6--U8 modify U4.
+\end{minipage}
+\end{table}

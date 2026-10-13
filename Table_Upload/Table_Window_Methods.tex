@@ -1,0 +1,89 @@
+\begin{table}[H]\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\caption{Purpose and implementation of the window-sensitivity checks.}
+\label{tab:window_sensitivity_methods}
+
+\begin{tabularx}{\textwidth}{
+@{}
+>{\raggedright\arraybackslash}p{2.3cm}
+>{\raggedright\arraybackslash}p{2.8cm}
+>{\raggedright\arraybackslash}X
+>{\raggedright\arraybackslash}X
+@{}
+}
+\toprule
+Analysis & Quantity & Question addressed & Method \\
+\midrule
+
+Isolated
+& ETC increment (TH/s)
+& How sensitive is the estimated migration increment
+to the observation windows and hash-rate statistic?
+& Calculate post-minus-pre ETC hash rate under each
+window combination using the mean, median, or
+10\% trimmed mean. \\
+
+Isolated
+& Pre-Merge power (GW)
+& How does variation in the migration increment
+affect estimated pre-Merge power?
+& Reallocate cohort hash rates using each increment
+and recompute power, holding profitability thresholds,
+hardware weights, tariff, and overhead fixed. \\
+
+Isolated
+& Fixed-budget saving (\%)
+& Does the accounting reduction depend on the
+window used to measure migration?
+& Calculate $100(1-\mathcal B_{\mathrm{ref}}/P_{0,k})$,
+using window-specific power and the fixed
+reference four-chain budget. \\
+
+Synchronized
+& Synchronized budget (GW)
+& How sensitive is the destination electricity budget
+to the post-Merge revenue window?
+& Recalculate mean daily revenues for all four chains
+over each selected post-window and convert them
+to electricity budgets at the reference tariff. \\
+
+Synchronized
+& Synchronized saving (\%)
+& How does jointly varying migration and revenues
+affect the accounting reduction?
+& Calculate $100(1-\mathcal B_k/P_{0,k})$,
+using window-specific migration and revenues
+while retaining reference hardware classification. \\
+
+Reclassified
+& Reclassified saving (\%)
+& How does additionally updating hardware
+classification affect the accounting reduction?
+& Update the ETC profitability threshold over
+the selected post-window, reclassify hardware,
+recompute power, and calculate
+$100(1-\mathcal B_k/P^{*}_{0,k})$. \\
+
+\bottomrule
+\end{tabularx}
+
+\par\smallskip
+\begin{minipage}{\textwidth}
+\footnotesize
+\textit{Notes:}
+$k$ indexes window specifications.
+$P_{0,k}$ uses the reference hardware classification,
+whereas $P^{*}_{0,k}$ additionally updates the ETC classification.
+$\mathcal B_{\mathrm{ref}}$ is the fixed reference four-chain budget,
+and $\mathcal B_k$ uses window-specific mean daily revenues.
+The isolated analysis contains 240 specifications;
+the synchronized and reclassified analyses contain 180
+because the earliest requested windows lack complete
+ETHW revenue coverage.
+The quantity names and row order match
+Table~\ref{uqadd:tabwindows}.
+Reported summaries are specification minima,
+medians, and maxima, not confidence intervals.
+\end{minipage}
+\end{table}

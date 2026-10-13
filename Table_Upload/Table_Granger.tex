@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Granger causality tests from the fixed VAR(14).}
+\label{tab:granger}
+\begin{tabular}{lrr}
+\toprule
+Null hypothesis & F-statistic & p-value \\
+\midrule
+$\Delta\ln(H)$ does not Granger-cause $\Delta\ln(p^{ETH})$ & 0.936 & 0.518 \\
+$\Delta\ln(p^{ETH})$ does not Granger-cause $\Delta\ln(H)$ & 5.048 & 1.99e-09 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note:} Daily log differences, January 1, 2018--October 31, 2021; 1,386 usable observations. Granger causality denotes conditional predictive content.
+\end{minipage}
+\end{table}

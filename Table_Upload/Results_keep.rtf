@@ -1,0 +1,215 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\\begin\{table\}[H]\
+\\centering\
+\\small\
+\\setlength\{\\tabcolsep\}\{4pt\}\
+\\renewcommand\{\\arraystretch\}\{1.12\}\
+\\caption\{Parameter-only Monte Carlo summaries based on 20,000 valid draws per specification.\}\
+\\label\{tab:mc_summary\}\
+\\begin\{tabular\}\{@\{\}lrrrr@\{\}\}\
+\\toprule\
+& \\multicolumn\{2\}\{c\}\{Power (GW)\}\
+& \\multicolumn\{2\}\{c\}\{Reduction (\\%)\}\\\\\
+\\cmidrule(lr)\{2-3\}\\cmidrule(l)\{4-5\}\
+Specification\
+& Median & 2.5th--97.5th pct.\
+& Median & 2.5th--97.5th pct.\\\\\
+\\midrule\
+U1: Economics only\
+& 3.024 & 2.598--3.699 & 91.78 & 86.57--93.74\\\\\
+U2: Composition only\
+& 2.851 & 2.151--3.260 & 92.64 & 90.24--93.56\\\\\
+U3: Joint; mean ASIC share 10\\%\
+& 3.016 & 2.497--3.806 & 91.70 & 86.55--93.90\\\\\
+U4: Joint; mean ASIC share 25\\%\
+& 2.891 & 2.249--3.995 & 91.22 & 86.50--93.67\\\\\
+U5: Joint; mean ASIC share 50\\%\
+& 2.657 & 1.916--4.397 & 90.24 & 85.78--93.37\\\\\
+U6: U4 + dispersed device shares\
+& 2.886 & 2.110--4.068 & 91.13 & 85.80--93.94\\\\\
+U7: U4 + correlated economics\
+& 2.905 & 2.307--3.972 & 91.29 & 86.21--93.96\\\\\
+U8: U4 + 5-GB devices\
+& 2.899 & 2.206--3.877 & 91.18 & 86.28--93.77\\\\\
+\\bottomrule\
+\\end\{tabular\}\
+\
+\\par\\smallskip\
+\\begin\{minipage\}\{\\linewidth\}\
+\\footnotesize\
+\\textit\{Note:\} U1 varies the tariff and overhead while using equal hash-rate\
+weights across eligible configurations. U2 fixes the tariff and overhead at\
+USD~0.10/kWh and 1.33 and varies hardware composition. U3--U5 jointly vary\
+economics and composition with mean mixed-cohort ASIC shares of 10\\%, 25\\%,\
+and 50\\%, respectively. U6--U8 modify U4 by allowing more dispersed\
+device-level shares, correlated economic inputs, and recorded 5~GB devices,\
+respectively. The percentile ranges describe outcomes under the specified\
+parameter distributions and are not statistical confidence intervals.\
+\\end\{minipage\}\
+\\end\{table\}\
+\
+\
+\
+\
+\\begin\{table\}[H]\
+\\centering\
+\\small\
+\\caption\{Post-Merge revenue-supported electricity budgets at USD~0.10/kWh.\}\
+\\label\{tab:postmerge_accounting\}\
+\\begin\{tabular\}\{@\{\}lr@\{\}\}\
+\\toprule\
+Network & Electricity budget (GW) \\\\\
+\\midrule\
+ETC  & 0.1391 \\\\\
+ETHW & 0.0193 \\\\\
+RVN  & 0.0348 \\\\\
+ERG  & 0.0193 \\\\\
+\\midrule\
+Four-chain total & 0.213\\\\\
+\\bottomrule\
+\\end\{tabular\}\
+\\par\\smallskip\
+\\begin\{minipage\}\{0.88\\linewidth\}\
+\\footnotesize\
+\\textit\{Note:\} Estimates are whole-network revenue-supported electricity budgets over the common post-Merge window based on the ``Top-down'' method. \
+\\end\{minipage\}\
+\\end\{table\}\
+\
+\
+\\begin\{table\}[H]\
+\\centering\
+\\caption\{Granger causality tests from the fixed VAR(14) on daily log differences in hash rate and price, January 1, 2018--October 31, 2021.\}\
+\\label\{tab:granger\}\
+\\begin\{tabular\}\{lcc\}\
+\\toprule\
+Null hypothesis ($H_0$) & $F$-statistic & $p$-value \\\\\
+\\midrule\
+$\\Delta\\ln(H)$ does not Granger-cause $\\Delta\\ln(p^\{ETH\})$ & 0.936 & 0.518 \\\\\
+$\\Delta\\ln(p^\{ETH\})$ does not Granger-cause $\\Delta\\ln(H)$ & 5.048 & $1.99\\times10^\{-9\}$ \\\\\
+\\bottomrule\
+\\end\{tabular\}\
+\\par\\smallskip\
+\\begin\{minipage\}\{\\linewidth\}\
+\\footnotesize\
+\\textit\{Note:\} Both tests use the notebook's fixed 14-lag specification, with 1,386 usable observations. Granger causality denotes predictive content conditional on the included lagged variables.\
+\\end\{minipage\}\
+\\end\{table\}\
+\
+\
+\\begin\{table\}[H]\
+\\centering\
+\\small\
+\\caption\{Accounting reductions across alternative window specifications.\}\
+\\label\{uqadd:tabwindows\}\
+\\input\{tables/windows\}\
+\\par\\smallskip\
+\\begin\{minipage\}\{0.82\\linewidth\}\
+\\footnotesize\
+\\textit\{Note:\} Reported values are specification minima, medians, and maxima,\
+not confidence intervals. The isolated analysis contains 240 specifications,\
+while the synchronized and reclassified analyses contain 180 because ETHW\
+revenue is unavailable for the earliest requested post-Merge window.\
+\\end\{minipage\}\
+\\end\{table\}\
+\
+\
+\
+\\begin\{table\}[H]\
+\\centering\
+\\small\
+\\renewcommand\{\\arraystretch\}\{1.15\}\
+\\caption\{Purpose and implementation of the window-sensitivity checks.\}\
+\\label\{tab:window_sensitivity_methods\}\
+\
+\\begin\{tabularx\}\{\\textwidth\}\{\
+@\{\}\
+>\{\\raggedright\\arraybackslash\}p\{2.3cm\}\
+>\{\\raggedright\\arraybackslash\}p\{2.8cm\}\
+>\{\\raggedright\\arraybackslash\}X\
+>\{\\raggedright\\arraybackslash\}X\
+@\{\}\
+\}\
+\\toprule\
+Analysis & Quantity & Question addressed & Method \\\\\
+\\midrule\
+\
+Isolated\
+& ETC increment (TH/s)\
+& How sensitive is the estimated migration increment\
+to the observation windows and hash-rate statistic?\
+& Calculate post-minus-pre ETC hash rate under each\
+window combination using the mean, median, or\
+10\\% trimmed mean. \\\\\
+\
+Isolated\
+& Pre-Merge power (GW)\
+& How does variation in the migration increment\
+affect estimated pre-Merge power?\
+& Reallocate cohort hash rates using each increment\
+and recompute power, holding profitability thresholds,\
+hardware weights, tariff, and overhead fixed. \\\\\
+\
+Isolated\
+& Fixed-budget saving (\\%)\
+& Does the accounting reduction depend on the\
+window used to measure migration?\
+& Calculate $100(1-\\mathcal B_\{\\mathrm\{ref\}\}/P_\{0,k\})$,\
+using window-specific power and the fixed\
+reference four-chain budget. \\\\\
+\
+Synchronized\
+& Synchronized budget (GW)\
+& How sensitive is the destination electricity budget\
+to the post-Merge revenue window?\
+& Recalculate mean daily revenues for all four chains\
+over each selected post-window and convert them\
+to electricity budgets at the reference tariff. \\\\\
+\
+Synchronized\
+& Synchronized saving (\\%)\
+& How does jointly varying migration and revenues\
+affect the accounting reduction?\
+& Calculate $100(1-\\mathcal B_k/P_\{0,k\})$,\
+using window-specific migration and revenues\
+while retaining reference hardware classification. \\\\\
+\
+Reclassified\
+& Reclassified saving (\\%)\
+& How does additionally updating hardware\
+classification affect the accounting reduction?\
+& Update the ETC profitability threshold over\
+the selected post-window, reclassify hardware,\
+recompute power, and calculate\
+$100(1-\\mathcal B_k/P^\{*\}_\{0,k\})$. \\\\\
+\
+\\bottomrule\
+\\end\{tabularx\}\
+\
+\\par\\smallskip\
+\\begin\{minipage\}\{\\textwidth\}\
+\\footnotesize\
+\\textit\{Notes:\}\
+$k$ indexes window specifications.\
+$P_\{0,k\}$ uses the reference hardware classification,\
+whereas $P^\{*\}_\{0,k\}$ additionally updates the ETC classification.\
+$\\mathcal B_\{\\mathrm\{ref\}\}$ is the fixed reference four-chain budget,\
+and $\\mathcal B_k$ uses window-specific mean daily revenues.\
+The isolated analysis contains 240 specifications;\
+the synchronized and reclassified analyses contain 180\
+because the earliest requested windows lack complete\
+ETHW revenue coverage.\
+The quantity names and row order match\
+Table~\\ref\{uqadd:tabwindows\}.\
+Reported summaries are specification minima,\
+medians, and maxima, not confidence intervals.\
+\\end\{minipage\}\
+\\end\{table\}\
+\
+}
