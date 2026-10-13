@@ -1,0 +1,3 @@
+cause,effect,lags,F_statistic,p_value
+dlog_hashrate,dlog_price,2,0.7552473501072282,0.46999055199344775
+dlog_price,dlog_hashrate,2,11.334403736000482,1.2515532179420235e-05
